@@ -1,7 +1,6 @@
 # Yash's .zshrc
 
 # Zsh plugins w/ Antidote
-export ANTIDOTE_HOME=~/.cache/antidote
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 source "$ANTIDOTE_HOME/bundle.zsh"
 

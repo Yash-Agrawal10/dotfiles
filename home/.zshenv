@@ -1,4 +1,4 @@
-# .zshenv stub so z dotfiles go in ~/.config/zsh
+# Yash's .zshenv
 
-export ZDOTDIR="$HOME/.config/zsh"
-source "$ZDOTDIR/.zshenv"
+# Rust
+. "/Users/yash/.local/share/.cargo/env"

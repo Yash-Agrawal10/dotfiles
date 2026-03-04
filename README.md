@@ -3,6 +3,7 @@
 ## Things to install
 
 ### CLI Tools
+neovim
 antidote
 starship
 bat
@@ -11,14 +12,14 @@ eza
 ### Applications
 iterm2
 
+### Other
+Rust
+
 ## Installation
 cd <path/to/dotfiles/repo>
 stow -t ~ home
 
 ## Specific Tool Notes
-
-### Shell
-I use zsh
 
 ### Antidote
 To generate plugins run:

@@ -1,5 +1,4 @@
-# Yash's .zprofile for Apple Silicon
+# Yash's .zprofile
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
-

@@ -15,10 +15,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Vim options
+-- Neovim keybinds
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+vim.keymap.set('n', '<leader>v', ':vsplit<CR>')
+vim.keymap.set('n', '<leader>s', ':split<CR>')
 
+-- Vim options
 vim.opt.relativenumber = true
 
 vim.opt.expandtab = true
@@ -55,6 +58,22 @@ require("lazy").setup({
       },
       lazy = false,
      },
+     {
+       "folke/which-key.nvim",
+       event = "VeryLazy",
+       opts = {
+         { "<leader>", group = "leader" },
+       },
+       keys = {
+         {
+           "<leader>?",
+           function()
+             require("which-key").show({ global = false })
+           end,
+           desc = "Buffer Local Keymaps (which-key)",
+         },
+       },
+     },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
@@ -68,10 +87,13 @@ vim.cmd.colorscheme("catppuccin-mocha")
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fh', function()
+  builtin.find_files({ hidden = true })
+end, { desc = 'Telescope find files (hidden)' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- NeoTree
-vim.keymap.set('n', '<leader>b', "<cmd>Neotree toggle<cr>", { desc = "Neotree toggle" })
+vim.keymap.set('n', '<leader>tb', "<cmd>Neotree toggle<cr>", { desc = "Neotree toggle" })
+vim.keymap.set('n', '<leader>tf', "<cmd>Neotree focus<cr>", { desc = "Neotree focus" })
 

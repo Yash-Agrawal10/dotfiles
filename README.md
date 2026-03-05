@@ -8,6 +8,7 @@ antidote
 starship
 bat
 eza
+tree-sitter
 
 ### Applications
 iterm2

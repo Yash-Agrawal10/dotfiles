@@ -35,63 +35,7 @@ vim.opt.clipboard = "unnamedplus"
 require("lazy").setup({
   spec = {
     { import = "plugins" },
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    {
-      'nvim-telescope/telescope.nvim', version = '*',
-      dependencies = {
-          'nvim-lua/plenary.nvim',
-          { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-      }
-    },
-    {
-      'nvim-treesitter/nvim-treesitter',
-      lazy = false,
-      build = ':TSUpdate'
-    },
-    {
-      "nvim-neo-tree/neo-tree.nvim",
-      branch = "v3.x",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "MunifTanjim/nui.nvim",
-        "nvim-tree/nvim-web-devicons",
-      },
-      lazy = false,
-     },
-     {
-       "folke/which-key.nvim",
-       event = "VeryLazy",
-       opts = {
-         { "<leader>", group = "leader" },
-       },
-       keys = {
-         {
-           "<leader>?",
-           function()
-             require("which-key").show({ global = false })
-           end,
-           desc = "Buffer Local Keymaps (which-key)",
-         },
-       },
-     },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
-
--- Enable/customize plugins
-
--- Colorscheme
-vim.cmd.colorscheme("catppuccin-mocha")
-
--- Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fh', function()
-  builtin.find_files({ hidden = true })
-end, { desc = 'Telescope find files (hidden)' })
-
--- NeoTree
-vim.keymap.set('n', '<leader>tt', "<cmd>Neotree toggle<cr>", { desc = "Neotree toggle" })
-vim.keymap.set('n', '<leader>tf', "<cmd>Neotree focus<cr>", { desc = "Neotree focus" })
-

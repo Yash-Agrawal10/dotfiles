@@ -3,9 +3,9 @@ return {
   lazy = false,
   build = ':TSUpdate',
   config = function()
-    require('nvim-treesitter').install({ 'c', 'cpp', 'python', 'rust', 'javascript', 'lua' })
+    require('nvim-treesitter').install({ 'c', 'cpp', 'python', 'rust', 'javascript', 'typescript', 'lua' })
     vim.api.nvim_create_autocmd("FileType", {
-      pattern = { "c", "cc", "cpp", "py", "rs", "js", "lua" },
+      pattern = { "c", "cpp", "rust", "python", "javascript", "typescript", "lua" },
       callback = function()
         vim.treesitter.start()
       end,

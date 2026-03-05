@@ -5,8 +5,10 @@ local tools = {
   'clangd',
   'typescript-language-server',
   'pyright',
+  'json-lsp',
   -- Format
   'clang-format',
+  'prettier'
   -- Lint
 }
 
@@ -31,11 +33,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
-      vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
-      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+      vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = "Hover" })
+      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Goto definition"})
+      vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = "Goto references" })
+      vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = "Rename symbol" })
+      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "Code Actions" })
+      vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Line diagnostic" })
+      vim.keymap.set("n", "<leader>l", vim.lsp.buf.format, { desc = "Format" })
     end
   }
 }

@@ -24,4 +24,4 @@ stow -t ~ home
 
 ### Antidote
 To generate plugins run:
-antidote bundle < ~/.config/zsh/plugins.txt > "$ANTIDOTE_HOME/bundle.zsh"
+antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh

@@ -1,8 +1,9 @@
 # Yash's .zshrc
 
 # Zsh plugins w/ Antidote
-source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
-source "$ANTIDOTE_HOME/bundle.zsh"
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
+source ~/.zsh_plugins.zsh
 
 # Shell prompt w/ Starship
 eval "$(starship init zsh)"

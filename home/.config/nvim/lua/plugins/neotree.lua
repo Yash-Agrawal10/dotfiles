@@ -8,7 +8,7 @@ return {
   },
   lazy = false,
   config = function()
-    vim.keymap.set('n', '<leader>tt', "<cmd>Neotree toggle<cr>", { desc = "Neotree toggle" })
-    vim.keymap.set('n', '<leader>tf', "<cmd>Neotree focus<cr>", { desc = "Neotree focus" })
+    vim.keymap.set('n', '<leader>b', "<cmd>Neotree toggle<cr>", { desc = "Neotree toggle" })
+    vim.keymap.set('n', '<leader>t', "<cmd>Neotree focus<cr>", { desc = "Neotree focus" })
   end
 }

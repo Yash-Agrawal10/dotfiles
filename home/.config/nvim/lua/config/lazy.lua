@@ -28,8 +28,13 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.opt.wildmenu = true
+vim.opt.wildmode = "longest:full,full"
 
 -- Setup lazy.nvim
 require("lazy").setup({

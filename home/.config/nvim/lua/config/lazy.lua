@@ -23,6 +23,7 @@ vim.keymap.set('n', '<leader>s', ':split<CR>')
 
 -- Vim options
 vim.opt.relativenumber = true
+vim.opt.linebreak = true
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 2

@@ -34,6 +34,9 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
+      vim.lsp.config("*", { capabilities = capabilities })
+
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto definition" })
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Goto references" })
@@ -57,5 +60,18 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"saghen/blink.cmp",
+		version = "*",
+		opts = {
+			keymap = { preset = "default" },
+			completion = {
+				documentation = { auto_show = true, auto_show_delay_ms = 200 },
+			},
+			sources = {
+				default = { "lsp", "path", "snippets", "buffer" },
+			},
+		},
 	},
 }

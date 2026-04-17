@@ -9,6 +9,7 @@ starship
 bat
 eza
 tree-sitter
+basictex
 
 ### Applications
 iterm2

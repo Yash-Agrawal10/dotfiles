@@ -1,0 +1,51 @@
+config:
+  dotpath: dotfiles
+
+actions:
+  post:
+    antidote-bundle: 'antidote bundle < ${{HOME}}/.zsh_plugins.txt > ${{HOME}}/.zsh_plugins.zsh'
+
+dotfiles:
+  f_zshrc:
+    dst: ~/.zshrc
+    src: shells/zsh/zshrc
+  f_zshenv:
+    dst: ~/.zshenv
+    src: shells/zsh/zshenv
+  f_zprofile:
+    dst: ~/.zprofile
+    src: shells/zsh/zprofile
+  f_zsh_plugins:
+    dst: ~/.zsh_plugins.txt
+    src: shells/zsh/zsh_plugins.txt
+    actions:
+      - antidote-bundle
+  f_profile:
+    dst: ~/.profile
+    src: shells/posix-profile
+  f_helix:
+    dst: ~/.config/helix/config.toml
+    src: editors/helix.toml
+  d_neovim:
+    dst: ~/.config/nvim
+    src: editors/neovim
+  f_tmux:
+    dst: ~/.tmux.conf
+    src: tmux.conf
+  f_starship:
+    dst: ~/.config/starship.toml
+    src: starship.toml
+  f_eza:
+    dst: ~/.config/eza/catppuccin-mocha.yml
+    src: eza.yml
+  f_iterm2:
+    dst: ~/.config/iterm2/themes/catppuccin-mocha.itermcolors
+    src: iterm2.itermcolors
+  d_bat:
+    dst: ~/.config/bat
+    src: bat
+
+profiles:
+  Yashs-MacBook-Air-1680.local:
+    dotfiles:
+      - ALL

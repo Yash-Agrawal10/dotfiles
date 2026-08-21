@@ -3,11 +3,10 @@
 # Zsh plugins w/ Antidote
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
-source ~/.zsh_plugins.zsh
 
 # Tab autocomplete
 autoload -Uz compinit
-compinit
+compinit -u
 
 # Shell prompt w/ Starship
 eval "$(starship init zsh)"
@@ -19,3 +18,9 @@ eval "$(zoxide init zsh)"
 alias cat="bat"
 alias ls="eza"
 alias cd="z"
+
+# Claude Code
+export PATH="$HOME/.local/bin:$PATH"
+
+# Cargo installed binaries
+export PATH="$HOME/.cargo/bin:$PATH"

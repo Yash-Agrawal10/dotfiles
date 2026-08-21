@@ -5,6 +5,7 @@ local tools = {
 	"clangd",
 	"typescript-language-server",
 	"pyright",
+	"ruff",
 	"json-lsp",
 	-- Format
 	"clang-format",

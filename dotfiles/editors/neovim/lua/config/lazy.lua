@@ -21,10 +21,12 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set('n', '<leader>v', ':vsplit<CR>')
 vim.keymap.set('n', '<leader>s', ':split<CR>')
 
--- Vim options
+-- Line numbers
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.linebreak = true
 
+-- Auto indent
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -32,10 +34,20 @@ vim.opt.shiftwidth = 2
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
+-- Clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Command lin completion
 vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
+
+-- Auto reload
+vim.opt.autoread = true
+vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI", "FocusGained", "BufEnter" }, {
+  group = vim.api.nvim_create_augroup("CheckExternalChanges", { clear = true }),
+  pattern = "*",
+  command = "checktime",
+})
 
 -- Setup lazy.nvim
 require("lazy").setup({

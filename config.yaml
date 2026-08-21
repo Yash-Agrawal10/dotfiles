@@ -3,7 +3,7 @@ config:
 
 actions:
   post:
-    antidote-bundle: 'antidote bundle < ${{HOME}}/.zsh_plugins.txt > ${{HOME}}/.zsh_plugins.zsh'
+    antidote-bundle: 'source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh && antidote bundle < ${{HOME}}/.zsh_plugins.txt > ${{HOME}}/.zsh_plugins.zsh'
 
 dotfiles:
   f_zshrc:
@@ -36,7 +36,7 @@ dotfiles:
     dst: ~/.config/starship.toml
     src: starship.toml
   f_eza:
-    dst: ~/.config/eza/catppuccin-mocha.yml
+    dst: ~/.config/eza/theme.yml
     src: eza.yml
   f_iterm2:
     dst: ~/.config/iterm2/themes/catppuccin-mocha.itermcolors
@@ -46,6 +46,6 @@ dotfiles:
     src: bat
 
 profiles:
-  Yashs-MacBook-Air-1680.local:
+  macbook:
     dotfiles:
       - ALL

@@ -11,6 +11,9 @@ compinit -u
 # Shell prompt w/ Starship
 eval "$(starship init zsh)"
 
+# fzf
+eval "$(fzf --zsh)"
+
 # Aliases for modern CLI tools
 alias cat="bat"
 alias ls="eza"

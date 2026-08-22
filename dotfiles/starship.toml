@@ -1,5 +1,3 @@
-# Yash's starship.toml
-
 palette = "catppuccin_mocha"
 
 add_newline = false

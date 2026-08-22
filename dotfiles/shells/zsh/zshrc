@@ -25,5 +25,5 @@ export PATH="$HOME/.local/bin:$PATH"
 # Cargo installed binaries
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Dotdrop profile (hostname isn't stable across networks, pin it explicitly)
+# Dotdrop profile
 export DOTDROP_PROFILE=macbook

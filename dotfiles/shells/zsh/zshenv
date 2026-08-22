@@ -1,2 +1,6 @@
 # Rust
 . "$HOME/.local/share/.cargo/env"
+
+# Default editor
+export EDITOR="hx"
+export VISUAL="hx"

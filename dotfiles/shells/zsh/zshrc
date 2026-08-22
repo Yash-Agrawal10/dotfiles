@@ -11,9 +11,6 @@ compinit -u
 # Shell prompt w/ Starship
 eval "$(starship init zsh)"
 
-# Enable zoxide
-eval "$(zoxide init zsh)"
-
 # Aliases for modern CLI tools
 alias cat="bat"
 alias ls="eza"
@@ -27,3 +24,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Dotdrop profile
 export DOTDROP_PROFILE=macbook
+
+# Enable zoxide (must go last)
+eval "$(zoxide init zsh)"
+

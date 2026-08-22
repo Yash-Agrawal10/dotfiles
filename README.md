@@ -1,46 +1,28 @@
 # Yash's Dotfile Repo
 
-## Things to install
+## Dotfiles
 
-### CLI Tools
-neovim
-antidote
-starship
-bat
-eza
-tree-sitter
-basictex
-dotdrop
+The actual dotfiles are all in the dofiles directory. They are organized by application. Their actual locations are defined in config.yaml.
 
-### Applications
-iterm2
+To install the dotfiles into their proper locations do the following:
 
-### Other
-Rust
-
-## Installation
-Install dotdrop:
+1. Install dotdrop:
 - macOS: `brew install dotdrop`
 - Debian/Ubuntu: `sudo apt install dotdrop`
+2. From the repo root, run `dotdrop install`
 
-Then, from the repo root:
-```
-dotdrop install
-```
+## Install
 
-Dotdrop picks the profile matching the machine's hostname automatically.
+The install directory contains srcipts that make it easier to install tools and applications.
 
-## Repo layout
-Dotfiles live under `dotfiles/`, organized by tool rather than mirroring
-`$HOME`'s dotted names directly. `config.yaml` maps each entry to where it
-actually gets deployed (see `dotdrop files`).
+### Brewfile
 
-## Specific Tool Notes
+Brewfile contains generic tools that can be installed on both macOS and Linux. It consists of tools generically useful for terminal work and should be installed on any machine, including ones accessed only through SSH.
 
-### Antidote
-Plugin bundling is handled automatically: a dotdrop post-action regenerates
-`~/.zsh_plugins.zsh` whenever `zsh_plugins.txt` is installed/updated. To run
-it manually:
-```
-antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
-```
+To install, run: `brew bundle install --file=install/Brewfile`
+
+### Brewfile.casks
+
+Brewfile.casks contains brew casks, which means it can only be run on MacOS. It mostly contains GUI applications that should not be installed on SSH-only setups, although there are some exceptions.
+
+To install, run: `brew bundle install --file=install/Brewfile.casks`

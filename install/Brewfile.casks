@@ -1,0 +1,5 @@
+cask "iterm2"
+cask "font-jetbrains-mono-nerd-font"
+cask "spotify"
+cask "rectangle"
+cask "claude-code"

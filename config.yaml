@@ -44,6 +44,9 @@ dotfiles:
   d_bat:
     dst: ~/.config/bat
     src: bat
+  f_yazi:
+    dst: ~/.config/yazi/theme.toml
+    src: yazi.toml
   d_git:
     dst: ~/.config/git
     src: git

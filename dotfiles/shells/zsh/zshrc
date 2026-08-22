@@ -17,7 +17,6 @@ eval "$(fzf --zsh)"
 # Aliases for modern CLI tools
 alias cat="bat"
 alias ls="eza"
-alias cd="z"
 
 # Claude Code
 export PATH="$HOME/.local/bin:$PATH"
@@ -27,7 +26,3 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Dotdrop profile
 export DOTDROP_PROFILE=macbook
-
-# Enable zoxide (must go last)
-eval "$(zoxide init zsh)"
-

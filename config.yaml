@@ -26,9 +26,6 @@ dotfiles:
   f_helix:
     dst: ~/.config/helix/config.toml
     src: editors/helix.toml
-  d_neovim:
-    dst: ~/.config/nvim
-    src: editors/neovim
   f_tmux:
     dst: ~/.tmux.conf
     src: tmux.conf

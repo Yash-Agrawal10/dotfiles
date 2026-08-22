@@ -44,6 +44,9 @@ dotfiles:
   d_bat:
     dst: ~/.config/bat
     src: bat
+  d_git:
+    dst: ~/.config/git
+    src: git
 
 profiles:
   macbook:

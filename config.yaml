@@ -3,20 +3,23 @@ config:
 
 actions:
   post:
-    antidote-bundle: 'source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh && antidote bundle < ${{HOME}}/.zsh_plugins.txt > ${{HOME}}/.zsh_plugins.zsh'
+    antidote-bundle: 'source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh && mkdir -p ${{HOME}}/.local/share/zsh && antidote bundle < ${{HOME}}/.config/zsh/plugins.txt > ${{HOME}}/.local/share/zsh/plugins.zsh'
 
 dotfiles:
+  f_zshenv_stub:
+    dst: ~/.zshenv
+    src: shells/zsh/zshenv-stub
   f_zshrc:
-    dst: ~/.zshrc
+    dst: ~/.config/zsh/.zshrc
     src: shells/zsh/zshrc
   f_zshenv:
-    dst: ~/.zshenv
+    dst: ~/.config/zsh/.zshenv
     src: shells/zsh/zshenv
   f_zprofile:
-    dst: ~/.zprofile
+    dst: ~/.config/zsh/.zprofile
     src: shells/zsh/zprofile
   f_zsh_plugins:
-    dst: ~/.zsh_plugins.txt
+    dst: ~/.config/zsh/plugins.txt
     src: shells/zsh/zsh_plugins.txt
     actions:
       - antidote-bundle

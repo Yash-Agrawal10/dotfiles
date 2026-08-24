@@ -1,10 +1,15 @@
+# History
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
+
 # Zsh plugins w/ Antidote
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+zstyle ':antidote:bundle' file "$XDG_CONFIG_HOME/zsh/plugins.txt"
+zstyle ':antidote:static' file "$XDG_DATA_HOME/zsh/plugins.zsh"
 antidote load
 
 # Tab autocomplete
 autoload -Uz compinit
-compinit -u
+compinit -u -d "$XDG_CACHE_HOME/zsh/zcompdump"
 
 # Shell prompt w/ Starship
 eval "$(starship init zsh)"

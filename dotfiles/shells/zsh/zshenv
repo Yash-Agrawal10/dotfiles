@@ -1,6 +1,33 @@
-# Rust
-[ -f "$HOME/.local/share/.cargo/env" ] && . "$HOME/.local/share/.cargo/env"
+# XDG Base Dirs
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 # Default editor
 export EDITOR="hx"
 export VISUAL="hx"
+
+# Claude Code
+export PATH="$HOME/.local/bin:$PATH"
+export CLAUDE_CONFIG_DIR="$XDG_DATA_HOME/claude-code"
+
+# Rust
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export PATH="$CARGO_HOME/bin:$PATH"
+
+# NPM
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+
+# Less
+export LESSHISTFILE="$XDG_STATE_HOME/less/history"
+
+# Matplotlib
+export MPLCONFIGDIR="$XDG_CACHE_HOME/matplotlib"
+
+# Wget
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+
+# Vim
+export VIMINIT='let $MYVIMRC = expand("$XDG_CONFIG_HOME/vim/vimrc") | source $MYVIMRC'

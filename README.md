@@ -9,7 +9,8 @@ To install the dotfiles into their proper locations do the following:
 1. Install dotdrop:
 - macOS: `brew install dotdrop`
 - Debian/Ubuntu: `sudo apt install dotdrop`
-2. From the repo root, run `dotdrop install`
+2. From the repo root, run `dotdrop install -p <profile>`.
+See config.yaml to select the correct profile. Currently the only profile is `macbook`.
 
 ## Install
 

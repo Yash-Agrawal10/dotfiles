@@ -1,5 +1,3 @@
-# Yash's .zshrc
-
 # Zsh plugins w/ Antidote
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
@@ -17,12 +15,4 @@ eval "$(fzf --zsh)"
 # Aliases for modern CLI tools
 alias cat="bat"
 alias ls="eza"
-
-# Claude Code
-export PATH="$HOME/.local/bin:$PATH"
-
-# Cargo installed binaries
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Dotdrop profile
-export DOTDROP_PROFILE=macbook
+alias grep="rg"

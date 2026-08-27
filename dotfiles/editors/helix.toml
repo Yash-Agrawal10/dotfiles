@@ -3,3 +3,11 @@ theme = "catppuccin_mocha"
 [editor]
 soft-wrap.enable = true
 line-number = "relative"
+
+[keys.normal]
+j = "move_line_down"
+k = "move_line_up"
+
+[keys.select]
+j = "extend_line_down"
+k = "extend_line_up"

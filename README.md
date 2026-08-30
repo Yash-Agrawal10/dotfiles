@@ -27,3 +27,10 @@ To install, run: `brew bundle install --file=install/Brewfile`
 Brewfile.casks contains brew casks, which means it can only be run on MacOS. It mostly contains GUI applications that should not be installed on SSH-only setups, although there are some exceptions.
 
 To install, run: `brew bundle install --file=install/Brewfile.casks`
+
+## Notes
+
+### To Add
+
+1. Docker
+2. Lazygit

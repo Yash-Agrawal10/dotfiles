@@ -5,8 +5,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # Default editor
-export EDITOR="hx"
-export VISUAL="hx"
+export EDITOR="vim"
+export VISUAL="vim"
 
 # Claude Code
 export PATH="$HOME/.local/bin:$PATH"

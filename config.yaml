@@ -23,9 +23,9 @@ dotfiles:
     src: shells/zsh/zsh_plugins.txt
     actions:
       - antidote-bundle
-  f_helix:
-    dst: ~/.config/helix/config.toml
-    src: editors/helix.toml
+  d_helix:
+    dst: ~/.config/helix
+    src: editors/helix
   f_tmux:
     dst: ~/.config/tmux/tmux.conf
     src: tmux/tmux.conf
@@ -52,7 +52,7 @@ dotfiles:
     src: wget/wgetrc
   f_vim:
     dst: ~/.config/vim/vimrc
-    src: vim/vimrc
+    src: editors/vim/vimrc
 
 profiles:
   macbook:

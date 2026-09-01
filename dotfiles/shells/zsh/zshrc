@@ -11,6 +11,9 @@ antidote load
 autoload -Uz compinit
 compinit -u -d "$XDG_CACHE_HOME/zsh/zcompdump"
 
+# Emacs keybindings (zsh would infer vi mode from $EDITOR)
+bindkey -e
+
 # Shell prompt w/ Starship
 eval "$(starship init zsh)"
 
